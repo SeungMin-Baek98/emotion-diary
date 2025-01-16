@@ -1,9 +1,77 @@
-# React + Vite
+### 제목
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+- **이름**: Emotion Diary
+- **설명**: React로 제작한 감정 일기 관리 웹 애플리케이션. 사용자가 감정을 기록하고 관리할 수 있도록 돕습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# emotion-diary
+### 📝 프로젝트
+
+---
+
+- 목적 : 사용자가 자신의 감정을 기록하고 관리할 수 있도록 돕는 웹 애플리케이션입니다.
+- 주요 기능 :
+    1. 일기 작성
+    2. 월 별 일기 필터링 
+    3. 최신 /  오래된 순 정렬
+    4. 상세 보기 및 수정
+- **데이터 저장 방식** :
+    - `localStorage`를 활용하여 사용자의 데이터를 브라우저에 저장 및 유지.
+- 배포 링크 :
+    - [감정 일기장](https://emotion-diary-three-ruby.vercel.app/)
+
+
+### 💻  기술스택
+
+---
+
+| Front - End | `React` `React Router` `Css` |
+| --- | --- |
+| Back - End  | `localStorage` |
+| 배포 | `Vercel` |
+
+### 🚀 주요 기능
+
+---
+
+1. 일기 작성 :
+    - 날짜, 감정 상태, 제목, 내용을 입력하여 일기 작성.
+    - 작성된 일기는 `localStorage`에 저장되며, 브라우저를 닫아도 데이터가 유지됨.
+  
+  
+2. 일기 목록 조회  : 
+    - 저장된 데이터를 불러와 최신/오래된 순 정렬 기능 제공.
+    - 월별 필터링을 통해 특정 달에 작성된 일기만 조회 가능.
+
+    
+3. 상세 보기 및 수정 : 
+    - 저장된 일기의 상세 내용을 확인하고 수정 가능.
+    - 수정된 내용은 `localStorage`에 즉시 반영됨.
+
+4. 삭제 :
+    - 사용자가 선택한 일기를 삭제하며, `localStorage`에서도 해당 데이터가 제거됨.
+
+### **💡 배운 점**
+
+---
+
+1. **localStorage를 활용한 데이터 관리**
+    - 브라우저의 `localStorage`를 활용하여 데이터를 영구적으로 저장하고 관리하는 방법을 학습.
+    - React의 상태 관리(`useState`, `useEffect`)와 `localStorage`를 연동하여 데이터 CRUD를 효율적으로 구현.
+    
+2. **React Router를 활용한 SPA 설계**
+    - `React Router`를 통해 다중 페이지처럼 동작하는 SPA를 설계하고 페이지 간의 경로를 효과적으로 관리.
+    - 상세 페이지와 수정 페이지를 별도로 설계하여 유연한 네비게이션 경험 제공.
+    
+3. **컴포넌트 재사용성 향상**
+    - 재사용 가능한 컴포넌트를 설계하고 다양한 상황에서 동작하도록 **props**를 통해 데이터와 동작을 주입하는 방법 학습.
+        - `Button` 컴포넌트를 긍정/부정 버튼, 저장 버튼 등 다양한 상황에서 재활용.
+        - `DiaryItem` 컴포넌트를 **목록 형태**, **상세 보기 형태** 등에서 일관된 로직과 스타일로 활용.
+        
+4. **React 상태 관리와 효율성**
+    - 컴포넌트 간 상태 전달 및 관리에서 최적화를 위해 React의 상태 관리 방식에 대해 깊이 학습.
+    - 렌더링 성능 최적화를 위해 `useMemo`와 `useCallback` 등의 Hook 사용 경험.
+    
+5. **UI/UX 설계 경험**
+    - 사용자의 감정 상태를 시각적으로 나타내기 위해 감정 아이콘 및 색상을 활용하여 직관적인 UI 구성.
+    - 정렬 및 필터링 옵션을 추가하여 다양한 사용 시나리오에 적합한 UX 제공.
